@@ -5,12 +5,16 @@ import { GLobalStyle } from "./styles/global";
 
 import { Transactions } from "./pages/Transactions";
 
+import { TransactionsProvider } from "./contexts/TransactionsContexts";
+
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GLobalStyle />
-      
-      <Transactions />
+
+      <TransactionsProvider>
+        <Transactions />
+      </TransactionsProvider>
     </ThemeProvider>
   );
 }
