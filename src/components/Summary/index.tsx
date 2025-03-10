@@ -11,7 +11,7 @@ export function Summary() {
     let formattedTotalPrice = priceFormatter.format(summary.total).toString();
 
     if (summary.total < 0) {
-    formattedTotalPrice = formattedTotalPrice.replace("-", "- ");
+        formattedTotalPrice = formattedTotalPrice.replace("-", "- ");
     }
 
     return (
