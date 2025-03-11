@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { MagnifyingGlass } from "phosphor-react";
 
 import { useForm } from "react-hook-form";
@@ -15,7 +16,7 @@ const searchFormSchema = z.object({
 
 type SearchFormInputs = z.infer<typeof searchFormSchema>;
 
-export function SearchForm() {
+function SearchFormComponent() {
     const fetchTransactions = useContextSelector(TransactionContext, (context) => {
         return context.fetchTransactions;
     });
@@ -49,3 +50,5 @@ export function SearchForm() {
         </div>
     );
 }
+
+export const SearchForm = memo(SearchFormComponent);
