@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+<h1 align="center">
+    💵 DT Money (Layout mobile em breve)
+</h1> 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img alt="Banner" title="Banner" src="./src/assets/templates/banner.png"/>
+</p>
 
-Currently, two official plugins are available:
+## 📌 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O **Dt Money** é um projeto que vai te auxiliar no seu controle financeiro, onde é possível cadastrar saídas e entradas do seu dinheiro, podendo fazer pesquisar por nome ou categoria.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [React](https://react.dev/)
+- [Vite](https://vite.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Também foram utilizadas algumas bibliotecas para compor e otimizar o projeto, basta olhar o package.json
+
+## 🔧 Requisitos
+
+Antes de iniciar o projeto, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/)
+
+---
+
+## 📦 Como Executar o Projeto (Dev)
+
+### 1️⃣ Clonando o Repositório
+```bash
+$ git clone git@github.com:c4mpos-dev/dt-money.git
+$ cd dt-money
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 2️⃣ Instalando Dependências
+```bash
+$ npm install
 ```
+
+### 3️⃣ Executando a aplicação
+```bash
+$ npx run dev
+```
+
+### JSON-SERVER
+```txt
+Como essa aplicação é feita para treino, é necessário o uso do json-server, basta baixar e configurar a biblioteca, todos suas funcionaçidades estão em seu respositório. É necessário alterar a porta local no ./src/lib/axios.ts, o padrão é 3000.
+```
+
+---
+
+## 🎨 Layout
+
+O design do projeto está disponível no Figma:
+
+- 🔗 [DT Money - Figma](https://www.figma.com/design/6XB8p5CDY4HzdhD0Fq8Fy0/DT-Money-(Community)?m=auto&t=9o60G88BHaeZub1O-6)
